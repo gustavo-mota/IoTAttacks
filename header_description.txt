@@ -1,0 +1,94 @@
+frame.time_delta: 
+Diferença de tempo entre o atual pacote capturado e o anterior.
+
+frame.time_epoch:
+Tempo de recebimento do pacote no formato epoch.
+
+frame.time_relative:
+Tempo de recebimento do pacote relativo ao início da captura dos dados pelo criador do dataset.
+
+ipv6.plen:
+Tamanho do pacote IPv6.
+
+ipv6.nxt:
+Especifica o tipo do próximo cabeçalho, normalmente qual protocolo da camada de transporte é usado pelo pacote. Baseado em uma lista é também usado pelo IPv4 (Lista: https://en.wikipedia.org/wiki/List_of_IP_protocol_numbers)
+Ex: 6 = Protocolo tcp
+
+ipv6.src:
+Endereço IPv6 da fonte dos dados.
+
+ipv6.dst:
+Endereço IPv6 do destinatário dos dados.
+
+tcp.srcport:
+Porta utilizada pela fonte dos dados para a comunicação.
+
+tcp.dstport:
+Porta utilizada pelo destinatário dos dados para a comunicação.
+
+eth.src:
+Endereço MAC da fonte dos dados.
+
+eth.dst:
+Endereço MAC do destinatário dos dados.
+
+frame.len:
+Tamanho do frame ethernet capturado.
+
+frame.number:
+Número do frame capturado (ordem crescente).
+
+label:
+Define que tipo de ataque está sendo efetuado no momento de captura do pacote (ou normal para nenhum ataque)
+
+mqtt.clientid:
+Id do client na comunicação mqtt.
+
+mqtt.dupflag:
+Flag que define se a entrega do pacote atual é duplicada (por ter sido enviada novamente) ou não.
+    0: é a primeira tentativa do cliente de enviar um pacote de controle do MQTT na publicação.
+    1: significa que o cliente está tentando enviar novamente os pacotes enviados anteriormente. 
+
+mqtt.hdrflags:
+Byte que define as flags de cabeçalho seguindo uma tabela pré-definida (Link: http://bytesofgigabytes.com/mqtt/mqtt-protocol-packet-structure/)
+
+mqtt.kalive:
+Significa a duração de inatividade máxima de comunicação (enviando pings para verificar a conexão) (Default: 60s)
+
+mqtt.len:
+Tamanho do pacote da mensagem mqtt.
+
+mqtt.msg:
+Conteúdo da mensagem mqtt.
+
+mqtt.msgid:
+Id da mensagem mqtt (1.0 ou 2.0)
+
+mqtt.msgtype:
+Tipo de mensagem MQTT (ids que seguem uma tabela definida) [Link para a tabela: http://bytesofgigabytes.com/mqtt/mqtt-protocol-packet-structure/]
+
+mqtt.passwd:
+Senha utilizada na conexão mqtt.
+
+mqtt.qos:
+Nível de QoS utilizado na comunicação (indica a garantia de entrega da mensagem) [Link para a tabela: http://bytesofgigabytes.com/mqtt/mqtt-protocol-packet-structure/]
+
+mqtt.retain:
+Significa se o broker (servidor) irá reter o pacote enviado ou não (esperando alguem dar um subscribe no topico ao qual a mensagem foi enviada)
+    0 = não reterá
+    1 = reterá
+
+mqtt.topic:
+Nome do tópico utilizado na comunicação.
+
+mqtt.topic_len:
+Tamanho do campo da mensagem mqtt referente ao tópico da comunicação.
+
+mqtt.username:
+Usuário utilizado na conexão mqtt.
+
+mqtt.willmsg:
+Mensagem que será enviada pelo broker aos subscribers quando um cliente se desconecta.
+
+mqtt.willtopic:
+Tópico para envio das mensagens will.
